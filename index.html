@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accura Systems, Inc. | High Performance Architectural Framing Systems</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            accura: '#6B1F2A',
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .reveal {
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity 500ms ease-out, transform 500ms ease-out;
+    }
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .hero-anim, .section-load {
+      opacity: 0;
+      transform: translateY(16px);
+      animation: fadeSlideUp 600ms ease-out forwards;
+    }
+    .hero-anim { animation-delay: 100ms; }
+    .section-load { animation-delay: 200ms; }
+    @keyframes fadeSlideUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .btn-hover:hover { transform: scale(1.02); }
+    .btn-hover:active { transform: scale(0.98); }
+    .card-hover {
+      transition: box-shadow 0.25s ease, transform 0.25s ease;
+    }
+    .card-hover:hover {
+      box-shadow: 0 10px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+      transform: translateY(-2px);
+    }
+    .img-zoom { transition: transform 0.3s ease; }
+    .img-zoom:hover { transform: scale(1.01); }
+  </style>
+</head>
+<body class="bg-white text-gray-800 antialiased">
+  <!-- Navbar -->
+  <header class="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
+    <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 md:h-18">
+        <a href="#" class="flex items-center gap-2 shrink-0">
+          <img src="./images/accurasystemsinc_logo.jpg" alt="Accura Systems Inc." class="h-10 w-auto object-contain" />
+          <span class="font-semibold text-gray-900 hidden sm:inline">Accura Systems Inc.</span>
+        </a>
+        <div class="hidden md:flex items-center gap-6">
+          <a href="#" class="text-gray-600 hover:text-accura transition">Products</a>
+          <a href="#capabilities" class="text-gray-600 hover:text-accura transition">Capabilities</a>
+          <a href="#about" class="text-gray-600 hover:text-accura transition">About</a>
+          <a href="#contact" class="text-gray-600 hover:text-accura transition">Contact</a>
+          <a href="#contact" class="btn-hover inline-flex items-center px-4 py-2 rounded-md bg-[#6B1F2A] text-white font-medium hover:bg-[#5a1a24] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#6B1F2A] transition">Request a Quote</a>
+        </div>
+        <button type="button" id="menu-toggle" class="md:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-accura" aria-label="Open menu">
+          <svg class="w-6 h-6" id="menu-icon-open" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg class="w-6 h-6 hidden" id="menu-icon-close" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden pb-4">
+        <div class="flex flex-col gap-2 pt-2">
+          <a href="#" class="py-2 text-gray-600 hover:text-accura">Products</a>
+          <a href="#capabilities" class="py-2 text-gray-600 hover:text-accura">Capabilities</a>
+          <a href="#about" class="py-2 text-gray-600 hover:text-accura">About</a>
+          <a href="#contact" class="py-2 text-gray-600 hover:text-accura">Contact</a>
+          <a href="#contact" class="btn-hover mt-2 inline-flex justify-center items-center px-4 py-2 rounded-md bg-[#6B1F2A] text-white font-medium hover:bg-[#5a1a24] focus:outline-none focus:ring-2 focus:ring-accura">Request a Quote</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 lg:py-20">
+      <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div class="hero-anim">
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">High performance architectural framing systems</h1>
+          <p class="mt-4 text-lg text-gray-600">Since 1989, Accura Systems, Inc. has manufactured and engineered custom aluminum and steel framing systems for commercial construction.</p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="#contact" class="btn-hover inline-flex items-center px-5 py-2.5 rounded-md bg-[#6B1F2A] text-white font-medium hover:bg-[#5a1a24] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#6B1F2A] transition">Request a Quote</a>
+            <a href="#contact" class="btn-hover inline-flex items-center px-5 py-2.5 rounded-md border-2 border-gray-300 text-gray-700 font-medium hover:border-gray-400 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 transition">Contact Sales</a>
+          </div>
+        </div>
+        <div class="section-load flex justify-center md:justify-end">
+          <img src="./images/neon-wang-tKQ1SYcHpso-unsplash.jpg" alt="Architectural framing" class="rounded-xl w-full max-w-lg object-cover img-zoom shadow-lg" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust strip -->
+    <section class="bg-gray-50 border-y border-gray-200 py-6">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div class="reveal">
+            <p class="font-semibold text-[#6B1F2A]">Since 1989</p>
+            <p class="text-sm text-gray-600 mt-0.5">Decades of experience</p>
+          </div>
+          <div class="reveal">
+            <p class="font-semibold text-[#6B1F2A]">Custom engineered</p>
+            <p class="text-sm text-gray-600 mt-0.5">Built to your specs</p>
+          </div>
+          <div class="reveal">
+            <p class="font-semibold text-[#6B1F2A]">Made in USA</p>
+            <p class="text-sm text-gray-600 mt-0.5">American manufacturing</p>
+          </div>
+          <div class="reveal">
+            <p class="font-semibold text-[#6B1F2A]">Code compliant systems</p>
+            <p class="text-sm text-gray-600 mt-0.5">Meeting building codes</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Capabilities -->
+    <section id="capabilities" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+      <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-10 reveal">Capabilities</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="reveal card-hover bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+          <span class="inline-flex p-2 rounded-lg bg-[#6B1F2A]/10 text-[#6B1F2A]">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+          </span>
+          <h3 class="mt-3 font-semibold text-gray-900">Unitized curtain wall systems</h3>
+          <p class="mt-2 text-sm text-gray-600">Custom unitized curtain wall solutions for modern facades.</p>
+        </div>
+        <div class="reveal card-hover bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+          <span class="inline-flex p-2 rounded-lg bg-[#6B1F2A]/10 text-[#6B1F2A]">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+          </span>
+          <h3 class="mt-3 font-semibold text-gray-900">Window systems</h3>
+          <p class="mt-2 text-sm text-gray-600">Engineered window systems for commercial and institutional use.</p>
+        </div>
+        <div class="reveal card-hover bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+          <span class="inline-flex p-2 rounded-lg bg-[#6B1F2A]/10 text-[#6B1F2A]">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+          </span>
+          <h3 class="mt-3 font-semibold text-gray-900">Skylights</h3>
+          <p class="mt-2 text-sm text-gray-600">High-performance skylight and daylighting systems.</p>
+        </div>
+        <div class="reveal card-hover bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+          <span class="inline-flex p-2 rounded-lg bg-[#6B1F2A]/10 text-[#6B1F2A]">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </span>
+          <h3 class="mt-3 font-semibold text-gray-900">Hurricane resistant systems</h3>
+          <p class="mt-2 text-sm text-gray-600">Framing designed to meet stringent wind and impact codes.</p>
+        </div>
+        <div class="reveal card-hover bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+          <span class="inline-flex p-2 rounded-lg bg-[#6B1F2A]/10 text-[#6B1F2A]">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8 4-8-4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+          </span>
+          <h3 class="mt-3 font-semibold text-gray-900">Blast resistant systems</h3>
+          <p class="mt-2 text-sm text-gray-600">Engineered for blast and security applications.</p>
+        </div>
+        <div class="reveal card-hover bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+          <span class="inline-flex p-2 rounded-lg bg-[#6B1F2A]/10 text-[#6B1F2A]">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </span>
+          <h3 class="mt-3 font-semibold text-gray-900">Ballistic resistant systems</h3>
+          <p class="mt-2 text-sm text-gray-600">Ballistic-rated framing for high-security environments.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Company overview -->
+    <section id="about" class="bg-gray-50 py-16 lg:py-20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+          <div class="reveal order-2 md:order-1">
+            <img src="./images/pexels-matsheard-5657435.jpg" alt="Commercial construction" class="rounded-xl w-full object-cover img-zoom shadow-md" />
+          </div>
+          <div class="reveal order-1 md:order-2">
+            <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Company overview</h2>
+            <p class="text-gray-600 leading-relaxed">Since 1989, Accura Systems, Inc. has been a manufacturer, distributor, and producer of high-performance architectural building products for commercial construction. Accura is the choice of glazing contractors when design criteria demand custom engineering and thinking outside the box. In-house designers, engineers, and project managers are dedicated to producing one-of-a-kind systems that meet exacting specifications and building codes. Accura develops customized systems in line with the design intent and specifications of the building’s design professionals. Known for the quality of their aluminum and steel framing systems, Accura manufactures and assembles unitized curtain wall systems, window systems, skylights, and hurricane-, blast-, and ballistic-resistant framing systems. Accura Patriot Enhanced Systems is one example of Accura’s commitment to producing high-performing framing systems.</p>
+            <ul class="mt-6 space-y-2 text-gray-600">
+              <li class="flex items-start gap-2"><span class="text-[#6B1F2A] mt-1">•</span> In-house engineering</li>
+              <li class="flex items-start gap-2"><span class="text-[#6B1F2A] mt-1">•</span> Custom fabrication</li>
+              <li class="flex items-start gap-2"><span class="text-[#6B1F2A] mt-1">•</span> Project delivery support</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured callout -->
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="reveal rounded-xl bg-[#6B1F2A] text-white p-8 md:p-10 shadow-lg">
+        <h2 class="text-2xl font-bold">Accura Patriot Enhanced Systems</h2>
+        <p class="mt-3 opacity-90">A commitment to high-performing framing systems for demanding applications.</p>
+        <ul class="mt-4 space-y-2 opacity-90">
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white shrink-0"></span> Specialized resistant systems</li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white shrink-0"></span> Built to demanding codes</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="bg-gray-50 py-16 lg:py-20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-10">
+          <div class="reveal">
+            <h2 class="text-2xl sm:text-3xl font-bold text-gray-900">Request a Quote</h2>
+            <p class="mt-3 text-gray-600">Tell us about your project and we’ll get back to you with pricing and options.</p>
+            <div class="mt-6 space-y-3 text-gray-600">
+              <p><span class="font-medium text-gray-800">Phone:</span> (555) 123-4567</p>
+              <p><span class="font-medium text-gray-800">Email:</span> info@accurasystems.com</p>
+              <p><span class="font-medium text-gray-800">Address:</span> Sunnyvale, Texas</p>
+            </div>
+          </div>
+          <div class="reveal">
+            <form class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm" onsubmit="return false;">
+              <div class="space-y-4">
+                <div>
+                  <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                  <input type="text" id="name" name="name" class="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 focus:border-[#6B1F2A] focus:ring-1 focus:ring-[#6B1F2A]" />
+                </div>
+                <div>
+                  <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                  <input type="email" id="email" name="email" class="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 focus:border-[#6B1F2A] focus:ring-1 focus:ring-[#6B1F2A]" />
+                </div>
+                <div>
+                  <label for="company" class="block text-sm font-medium text-gray-700">Company</label>
+                  <input type="text" id="company" name="company" class="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 focus:border-[#6B1F2A] focus:ring-1 focus:ring-[#6B1F2A]" />
+                </div>
+                <div>
+                  <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                  <textarea id="message" name="message" rows="4" class="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 focus:border-[#6B1F2A] focus:ring-1 focus:ring-[#6B1F2A]"></textarea>
+                </div>
+                <button type="submit" disabled class="btn-hover w-full md:w-auto px-5 py-2.5 rounded-md bg-[#6B1F2A] text-white font-medium hover:bg-[#5a1a24] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#6B1F2A] transition disabled:opacity-70 disabled:cursor-not-allowed">Send message</button>
+                <p class="text-xs text-gray-500">Demo only, not connected.</p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <p class="font-semibold text-white">Accura Systems Inc.</p>
+          <p class="mt-2 text-sm">Architectural building products for commercial construction.</p>
+          <p class="mt-1 text-sm">Sunnyvale, Texas</p>
+        </div>
+        <div>
+          <p class="font-medium text-white mb-2">Quick links</p>
+          <ul class="flex flex-wrap gap-4 text-sm">
+            <li><a href="#" class="hover:text-white transition">Products</a></li>
+            <li><a href="#capabilities" class="hover:text-white transition">Capabilities</a></li>
+            <li><a href="#about" class="hover:text-white transition">About</a></li>
+            <li><a href="#contact" class="hover:text-white transition">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      // Mobile menu
+      var toggle = document.getElementById('menu-toggle');
+      var menu = document.getElementById('mobile-menu');
+      var iconOpen = document.getElementById('menu-icon-open');
+      var iconClose = document.getElementById('menu-icon-close');
+      if (toggle && menu) {
+        toggle.addEventListener('click', function () {
+          var isOpen = !menu.classList.contains('hidden');
+          menu.classList.toggle('hidden');
+          if (iconOpen) iconOpen.classList.toggle('hidden', !isOpen);
+          if (iconClose) iconClose.classList.toggle('hidden', isOpen);
+        });
+      }
+      // Close mobile menu on anchor click (same page)
+      document.querySelectorAll('#mobile-menu a[href^="#"]').forEach(function (a) {
+        a.addEventListener('click', function () {
+          menu.classList.add('hidden');
+          if (iconOpen) iconOpen.classList.remove('hidden');
+          if (iconClose) iconClose.classList.add('hidden');
+        });
+      });
+
+      // Scroll reveal
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+          }
+        });
+      }, { rootMargin: '0px 0px -40px 0px', threshold: 0 });
+      document.querySelectorAll('.reveal').forEach(function (el) { observer.observe(el); });
+    })();
+  </script>
+</body>
+</html>
